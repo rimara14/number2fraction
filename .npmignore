@@ -1,0 +1,6 @@
+tsconfig.json
+src
+node_modules
+.nyc_output
+.travis.yml
+coverage
