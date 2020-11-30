@@ -1,6 +1,6 @@
 {
   "name": "number2fraction",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "convert decimal number to fraction in string and vice versa. ex: 0.5 -> 1/2 or 3/4 -> 0.75",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,10 +13,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rimara14/terbilang.git"
+    "url": "git+https://github.com/rimara14/number2fraction.git"
   },
   "keywords": [
-    "terbilang"
+    "number2fraction",
+    "fraction"
   ],
   "author": "rimara14 <rizkirachyan@gmail.com>",
   "license": "ISC",
