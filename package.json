@@ -1,6 +1,6 @@
 {
   "name": "number2fraction",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "convert decimal number to fraction in string and vice versa. ex: 0.5 -> 1/2 or 3/4 -> 0.75",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

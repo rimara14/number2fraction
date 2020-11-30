@@ -1,22 +1,25 @@
-[![codecov](https://codecov.io/gh/rimara14/terbilang/branch/master/graph/badge.svg?token=k2udo33EUM)](https://codecov.io/gh/rimara14/terbilang)
+[![codecov](https://codecov.io/gh/rimara14/number2fraction/branch/master/graph/badge.svg?token=7PGMPH66IV)](https://codecov.io/gh/rimara14/number2fraction)
 
 ## Introduction
-***Terbilang** is a library to convert decimal number into spoken word. For example, `1024` as `Seribu Dua Puluh Empat`. Support up to 999,999,999,999*
-
-**Terbilang** merupakan *library* untuk mengubah angka numerik menjadi bentuk terbilang. Sebagai contoh, `1024` menjadi `Seribu Dua Puluh Empat`. Mendukung hingga angka 999,999,999,999
+***Number2fraction** is a library to convert convert decimal number to fraction in string and vice versa.* 
+For example, `0.5 -> 1/2` or `3/4 -> 0.75`
 
 ## Installation
 ```bash
-npm install angka-terbilang --save
+npm install number2fraction --save
 ```
 
 ## Usage
-*Support input with type either `string` or `number`.*
-
-*Support* masukkan dengan tipe `string` ataupun `number`.
 ```ts
-import terbilang from 'angka-terbilang';
+import { number2fraction, fraction2number } from 'number2fraction';
 
-terbilang(123456); // seratus dua puluh tiga ribu empat ratus lima puluh enam
-terbilang('123456'); // seratus dua puluh tiga ribu empat ratus lima puluh enam
+number2fraction(0.25) // 1/4
+number2fraction(0.5) // 1/2
+number2fraction(0.75) // 3/4
+number2fraction(0.667) // 667/1000
+    
+fraction2number('1/2') // 0.5
+fraction2number('1/4') // 0.25
+fraction2number('3/4') // 0.75
+fraction2number('2/3') // 0.667
 ```
