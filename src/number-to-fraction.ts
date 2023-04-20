@@ -3,7 +3,7 @@ const decimalPattern = /^\d+\.\d+$/;
 /**
  * convert decimal number to fraction
  */
-export function number2fraction(n: number): string {
+export function number2fraction(n: number, mixedFraction: boolean = false): string {
   if (!decimalPattern.test(n.toString())) {
     return n.toString();
   }
@@ -13,6 +13,16 @@ export function number2fraction(n: number): string {
   const denominator = Math.pow(10, afterDecimal);
   const numerator = n * denominator;
   const divisor = gcd(numerator, denominator);
+
+  if (mixedFraction) {
+    const wholeNumberRaw = numerator - (numerator % denominator);
+    const wholeNumber = wholeNumberRaw / denominator;
+    const newNumerator = numerator - wholeNumberRaw;
+    if (wholeNumber) {
+      return `${wholeNumber} ${newNumerator / divisor}/${denominator / divisor}`;
+    }
+  }
+
   return `${numerator / divisor}/${denominator / divisor}`;
 }
 

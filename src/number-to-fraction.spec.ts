@@ -8,11 +8,23 @@ describe('Number to Fraction', () => {
 
   it('should be able to convert decimal number to fraction' , () => {
     expect(number2fraction(0.25)).to.equal('1/4');
+    expect(number2fraction(0.25, true)).to.equal('1/4');
     expect(number2fraction(0.5)).to.equal('1/2');
+    expect(number2fraction(0.5, true)).to.equal('1/2');
     expect(number2fraction(0.75)).to.equal('3/4');
+    expect(number2fraction(0.75, true)).to.equal('3/4');
     expect(number2fraction(0.667)).to.equal('667/1000');
+    expect(number2fraction(0.667, true)).to.equal('667/1000');
     expect(number2fraction(0.333)).to.equal('333/1000');
+    expect(number2fraction(0.333, true)).to.equal('333/1000');
     expect(number2fraction(1.66667)).to.equal('166667/100000');
+  });
+
+  it('should be able to convert decimal number to mixed fraction' , () => {
+    expect(number2fraction(2.25, true)).to.equal('2 1/4');
+    expect(number2fraction(7.5, true)).to.equal('7 1/2');
+    expect(number2fraction(5.75, true)).to.equal('5 3/4');
+    expect(number2fraction(1.66667, true)).to.equal('1 66667/100000');
   });
 
 
